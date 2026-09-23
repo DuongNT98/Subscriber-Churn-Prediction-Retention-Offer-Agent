@@ -1,0 +1,18 @@
+# Retention offer matrix — S-5 constrained: OfferSelectNode may ONLY choose
+# from this pre-approved list. No offer is ever generated outside this matrix;
+# the LLM is used only to render the copy_template into subscriber-facing text.
+offers:
+  high:
+    - offer_id: "device_discount_20"
+      kind: "device_discount"
+      copy_template: "You're eligible for 20% off your next device upgrade — a thank-you for being a loyal subscriber."
+    - offer_id: "plan_upgrade_free_month"
+      kind: "plan_upgrade"
+      copy_template: "Enjoy one month of our premium plan on us — more data, more speed, no extra charge."
+    - offer_id: "points_bonus_1000"
+      kind: "points_bonus"
+      copy_template: "1,000 bonus points have been added to your account as a thank-you."
+
+default_channel: "carrier_app"
+opt_out_url: "https://example.carrier.example/retention/opt-out"
+daily_rate_limit: 3
